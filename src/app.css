@@ -1,0 +1,90 @@
+/* PWLaTeX global theme — dark, IDE-like, quiet surfaces with one accent. */
+
+:root {
+  --bg-0: #0e1116; /* app background */
+  --bg-1: #141922; /* panels */
+  --bg-2: #1a212c; /* raised elements: hover, inputs */
+  --bg-3: #222b38; /* active elements */
+  --border-0: #262f3d;
+  --border-1: #323d4f;
+  --text-0: #e8ecf3;
+  --text-1: #aeb7c7;
+  --text-2: #778193;
+  --accent: #6ea8fe;
+  --accent-strong: #3d7dff;
+  --accent-dim: rgba(110, 168, 254, 0.14);
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --font-sans:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  --font-mono:
+    'JetBrains Mono',
+    'Fira Code',
+    ui-monospace,
+    'SF Mono',
+    Menlo,
+    Consolas,
+    monospace;
+  --radius: 8px;
+  --header-h: 52px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden; /* the app is a fixed viewport layout */
+}
+
+#app {
+  height: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(110, 168, 254, 0.28);
+}
+
+/* Slim scrollbars that match the theme. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-1) transparent;
+}
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--border-1);
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}

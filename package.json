@@ -1,0 +1,36 @@
+{
+  "name": "pwlatex",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "100% client-side, backend-free LaTeX editor. Compiles real PDFs in the browser via WebAssembly.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "download-assets": "texlyre-busytex download-assets ./public/core",
+    "postinstall": "texlyre-busytex download-assets ./public/core"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/language": "^6.11.3",
+    "@codemirror/legacy-modes": "^6.5.2",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.38.6",
+    "@lezer/highlight": "^1.2.5",
+    "@types/jszip": "^3.4.0",
+    "jszip": "^3.10.2",
+    "lucide-svelte": "^0.545.0",
+    "texlyre-busytex": "^1.4.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.19.2",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5"
+  }
+}
